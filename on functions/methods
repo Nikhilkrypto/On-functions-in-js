@@ -1,0 +1,61 @@
+// onchange function of js
+//onchange functions do a thing that if there is any change in js then it informs that the change is made
+const inputField=document.querySelector('input');
+inputField.addEventListener('change',()=>{
+    console.log('changeDetected');
+})
+//in this exampel if the string is inputed then it indicate that the change is detected and if the string is same as previous one then it should not deteccted or not give the output
+
+
+//onclick
+//html code
+<div class="content">
+        <p>This is the initial content that will be shown.</p>
+        <p>More content will be displayed when the "Show More" button is clicked.</p>
+        <p class="more-content">This is the hidden content.</p>
+    </div> 
+     <button class="show-more">Show More</button> 
+//js code
+const content = document.querySelector('.content');
+const moreContent = document.querySelector('.more-content');
+const showMoreButton = document.querySelector('.show-more');
+moreContent.style.display='none'
+showMoreButton.onclick=function()
+{
+    if(moreContent.style.display=='none')
+    {
+        moreContent.style.display='block';
+        showMoreButton.textContent='Show Less';
+    }
+    else
+    {
+        moreContent.style.display='none';
+        showMoreButton.textContent='Show More';
+    }
+}
+//in this part when the user click on button then first it checks that is that content is hidden already or not it yes then it shows the code and change the text content and when the its already showing then it should show less
+
+
+
+//onmouseover and onmouseout
+const inputField=document.querySelector('input');
+inputField.onmouseover=()=>{
+    console.log('Mouse in ')
+}
+inputField.onmouseout=()=>{
+    console.log('mouse out')
+}
+
+//onkeydown whenever some key is pressed then it shows that key is presed
+
+document.onkeydown=()=>{
+    console.log('key is pressed')
+}
+exxampple on that
+//js to print what is the key is pressed key=keyup,keydown,keypress
+document.addEventListener('keydown',function(e)
+{
+    var keypress=e.key;
+    document.querySelector('.inform').textContent=keypress;
+    console.log(keypress);
+})
